@@ -1,0 +1,64 @@
+<div *ngIf="currentAnimal.id" class="edit-form">
+    <h4>Animal</h4>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="currentAnimal.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input
+          type="text"
+          class="form-control"
+          id="age"
+          [(ngModel)]="currentAnimal.age"
+          name="age"
+        />
+      </div>
+
+      <!-- <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentAnimal.published ? "Published" : "Pending" }}
+      </div>
+    </form>
+
+    <button
+      class="badge badge-primary mr-2"
+      *ngIf="currentAnimal.published"
+      (click)="updatePublished(false)"
+    >
+      UnPublish
+    </button>
+    <button
+      *ngIf="!currentAnimal.published"
+      class="badge badge-primary mr-2"
+      (click)="updatePublished(true)"
+    >
+      Publish
+    </button> -->
+
+    <!-- <button class="badge badge-danger mr-2" (click)="deleteAnimal()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateAnimal()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p> -->
+  <!-- </div> -->
+
+  <div *ngIf="!currentAnimal.id">
+    <br />
+    <p>Cannot access this Animals details...</p>
+  </div>
+<!-- </div> -->
