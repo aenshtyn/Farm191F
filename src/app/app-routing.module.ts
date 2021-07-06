@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddAnimalComponent } from './components/add-animal/add-animal.component';
 import { AnimalDetailsComponent } from './components/animal-details/animal-details.component';
 import { AnimalListComponent } from './components/animal-list/animal-list.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'animals', pathMatch: 'Full'  },
@@ -12,7 +13,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
